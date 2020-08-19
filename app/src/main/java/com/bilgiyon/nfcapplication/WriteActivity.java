@@ -48,7 +48,7 @@ public class WriteActivity extends AppCompatActivity {
         if (intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
             Toast.makeText(this, "NfcIntent!", Toast.LENGTH_SHORT).show();
             Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-            NdefMessage ndefMessage = createNdefMessage("Şerif Kazan");
+            NdefMessage ndefMessage = createNdefMessage("Message");
 
             writeNdefMessage(tag, ndefMessage);
         }
